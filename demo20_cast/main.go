@@ -40,11 +40,13 @@ func showInfo(s shape) {
 	case "circle":
 		c := s.(circle)
 		fmt.Printf("Circle radius: %f\n", c.radius)
+		break
 	}
 }
 
 func castToRectangle(s shape) {
 	r, ok := s.(rectangle)
+	fmt.Println("ok = ", ok)
 	if !ok {
 		fmt.Println("Casting Error")
 	} else {
